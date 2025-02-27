@@ -13,12 +13,14 @@ namespace CSharp_Reference
             Console.WriteLine("\n____Strings____\n");
 
 
-            // Basic string usage
             string greeting = "Hello, World!";
             string name = "Alice";
-            string combined = greeting + " My name is " + name + ".";
+            string combined1 = greeting + " My name is " + name + ".";
+            string combined2 = $"{greeting} My name is {name}.";
+            string combined3 = String.Format("Output: {0}, {1}.", greeting, "alice");
 
-            int strLength = name.Length;
+            int strLength = name.Length; 
+
 
             // String manipulation
             string upper = greeting.ToUpper();
@@ -33,7 +35,11 @@ namespace CSharp_Reference
             string sub6 = greeting[^6..^1];            // "World" (negative index)
 
             bool containsHello = greeting.Contains("Hello");
-            Console.WriteLine($"Upper: {upper}, Lower: {lower}, Substring: {substring}, Contains 'Hello': {containsHello}");
+
+            string[] strArray = greeting.Split(','); // split on , and return a string[]
+            int posOf = greeting.IndexOf("!");
+            bool eqTest = greeting.Equals("HelloWorld");
+
 
 
             // Static string methods in C#
@@ -62,18 +68,6 @@ namespace CSharp_Reference
             // string.Format("Hello, {0}!", "World") // string, formats the string with placeholders
 
 
-
-
-            // Loop through characters in a string
-            string word = "Example";
-            Console.Write("Characters: ");
-            foreach (char c in word)
-            {
-                Console.Write(c + " ");
-            }
-
-            Console.WriteLine();
-
             // Parsing numbers to strings
             int number = 123;
             double pi = 3.14159;
@@ -82,7 +76,25 @@ namespace CSharp_Reference
 
             Console.WriteLine($"Number as String: {numStr}, Pi as String: {piStr}");
 
-            char[] charArr = "hello".ToCharArray(); // char[]
+
+            // Loop through characters in a string
+            string word = "Example";
+            foreach (char c in word)
+            {
+                Console.Write(c + "-"); 
+            }
+            Console.WriteLine();
+
+
+
+            char[] charArr = "hello".ToCharArray(); // convert a string to char[]
+            string backToString = new string (charArr); // char[] converted to a string. 'new string (chararr)' only works for char[]. 
+
+            char charX = 'x';
+            string wasChar = charX.ToString(); // convert a char to string. and 'new string ('a')' does not work for individual chars.
+
+            Console.WriteLine($"result: {charX} and {wasChar}");
+
 
         }
     }
