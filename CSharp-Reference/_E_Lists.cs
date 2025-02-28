@@ -12,12 +12,22 @@ namespace CSharp_Reference
         {
             //== List Declaration and Initialization ===========================//
 
+            List<int> list10 = new List<int>(); // empty list
             List<int> intList = new List<int> { 1, 2, 3, 4, 5 }; // List with initial values
             List<int> intListAlt = new() { 2, 4, 5, 1 };
             List<string> stringList = new List<string>(); // Empty List of strings
-            stringList.Add("Apple"); // Add single element
+            stringList.Add("Apple"); 
             stringList.Add("Banana");
+            stringList.Remove("Apple");
 
+            foreach (string str in stringList)
+            {
+                Console.WriteLine(str);
+            }
+            for (int i = 0; i < stringList.Count; i++)
+            {
+                Console.WriteLine(stringList[i]);
+            }
             Console.WriteLine($"First element in intList: {intList[0]}"); // Access by index
             Console.WriteLine($"Second element in stringList: {stringList[1]}");
 

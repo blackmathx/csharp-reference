@@ -27,7 +27,7 @@ namespace CSharp_Reference
             // char       2 bytes  - Stores a single Unicode character (16-bit, supports all Unicode characters)
             // string     2 bytes per character - Stores a sequence of Unicode characters, surrounded by double quotes (UTF-16 encoding)
 
-
+            //             Size                                                                        Allowed Values                                                  Default
             // bool        Boolean value                                                               True or False                                                   False
             // byte        8 - bit unsigned integer                                                    0 to 255                                                        0
             // char        16 - bit Unicode character                                                  U + 0000 to U +ffff                                             '\0'
@@ -42,10 +42,9 @@ namespace CSharp_Reference
             // ulong       64 - bit unsigned integer type                                              0 to 18,446,744,073,709,551,615                                 0
             // ushort      16 - bit unsigned integer type                                              0 to 65,535                                                     0
 
-            // There are 3 built in data types
-            // object, string, dynamic
+            // There are 3 built in data types and an pointer type
+            // object, string, dynamic. pointer example: int* iptr;
 
-            // A pointer type, example: int* iptr;
 
             // Nullable types in C# are as follows
             // int? age = null;

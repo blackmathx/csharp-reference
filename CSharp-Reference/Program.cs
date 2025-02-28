@@ -11,7 +11,7 @@
             //_D_Arrays.runner();
             //_E_Lists.runner();
             //_F_ConditionalAndLoops.runner();
-            _G_Structs.runner();
+            //_G_Structs.runner();
 
 
 

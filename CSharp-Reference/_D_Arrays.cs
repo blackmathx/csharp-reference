@@ -14,6 +14,7 @@ namespace CSharp_Reference
 
             //== Array Declaration and Initialization ====================================//
 
+            int[] intArr10 = new int[5]; // initialize array to length 5
             int[] intArray = new int[] { 1, 2, 3, 4, 5 }; // Explicit initialization
             string[] stringArray = { "Apple", "Banana", "Cherry" }; // Implicit initialization
 
