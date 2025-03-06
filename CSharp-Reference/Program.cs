@@ -7,7 +7,7 @@
 
             //_A_Intro.runner();
             //_B_Numbers.runner();
-            //_C_Strings.runner();
+            _C_Strings.runner();
             //_D_Arrays.runner();
             //_E_Lists.runner();
             //_F_ConditionalAndLoops.runner();
