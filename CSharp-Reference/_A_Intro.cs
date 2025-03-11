@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -78,9 +79,29 @@ namespace CSharp_Reference
             // Console.WriteLine("Name: " + name + ", Age: " + age);
             // Console.WriteLine(string.Format("Name: {0}, Age: {1}", name, age));
 
+            // object type
+            object height = 1.8;
+            object name = "Allan";
+            int len = ((string)name).Length; // doesn't compile without explicit cast
+
+            // dynamic type
+            dynamic name2 = "Allen"; // compiles but throws error if data type doesn't have Length property
+            int len2 = name2.Length;
+
+            var fruit = "Apples";
+            Console.WriteLine(fruit);
+
+            // Read key input
+            ConsoleKeyInfo key = Console.ReadKey();
+            Console.WriteLine($"\n{key.KeyChar}");
+
+            // Sleep
+            System.Threading.Thread.Sleep(2000);
 
 
-
+            Trace.WriteLine("debugging");
+            Debug.WriteLine("debugging");
+            // see configurint trace listeners to write to a text file
 
         }
     }

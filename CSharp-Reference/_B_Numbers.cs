@@ -36,6 +36,12 @@ namespace CSharp_Reference
             ushort smallUShort = (ushort)smallShort; // short to ushort (may cause overflow)
             byte smallByte = (byte)smallShort; // short to byte (may cause overflow)
 
+            decimal someDecimal = 213.3M;
+
+            // Note: use doubles when accuracy when comparing equality of two numbers is not important.
+            // Never compare doubles with ==. The decimal type is accurate and used for money, engineering.
+            // 
+
             // Display values
             Console.WriteLine($"Implicit Casting: {sb} -> {b} -> {s} -> {us} -> {i} -> {ui} -> {l} -> {ul} -> {f} -> {d}");
             Console.WriteLine($"Explicit Casting: {largeDouble} -> {smallFloat} -> {smallLong} -> {smallInt} -> {smallShort} -> {smallUShort} -> {smallByte}");
@@ -87,7 +93,22 @@ namespace CSharp_Reference
 
 
 
-
+            string rowSeparator = new string('-', count: 74);
+            Console.WriteLine(rowSeparator);
+            Console.WriteLine("Type    Byte(s) of memory               Min                            Max");
+            Console.WriteLine(rowSeparator);
+            Console.WriteLine($"sbyte   {sizeof(sbyte),-4} {sbyte.MinValue,30} {sbyte.MaxValue,30}");
+            Console.WriteLine($"byte    {sizeof(byte),-4} {byte.MinValue,30} {byte.MaxValue,30}");
+            Console.WriteLine($"short   {sizeof(short),-4} {short.MinValue,30} {short.MaxValue,30}");
+            Console.WriteLine($"ushort  {sizeof(ushort),-4} {ushort.MinValue,30} {ushort.MaxValue,30}");
+            Console.WriteLine($"int     {sizeof(int),-4} {int.MinValue,30} {int.MaxValue,30}");
+            Console.WriteLine($"uint    {sizeof(uint),-4} {uint.MinValue,30} {uint.MaxValue,30}");
+            Console.WriteLine($"long    {sizeof(long),-4} {long.MinValue,30} {long.MaxValue,30}");
+            Console.WriteLine($"ulong   {sizeof(ulong),-4} {ulong.MinValue,30} {ulong.MaxValue,30}");
+            Console.WriteLine($"float   {sizeof(float),-4} {float.MinValue,30} {float.MaxValue,30}");
+            Console.WriteLine($"double  {sizeof(double),-4} {double.MinValue,30} {double.MaxValue,30}");
+            Console.WriteLine($"decimal {sizeof(decimal),-4} {decimal.MinValue,30} {decimal.MaxValue,30}");
+            Console.WriteLine(rowSeparator);
 
         }
     }
