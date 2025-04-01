@@ -77,18 +77,18 @@ namespace CSharp_Reference
 
             // Type Casting
             //----------------
-            // Console.WriteLine(Convert.ToString(myInt));    // convert int to string
-            // Console.WriteLine(Convert.ToDouble(myInt));    // convert int to double
-            // Console.WriteLine(Convert.ToInt32(myDouble));  // convert double to int
-            // Console.WriteLine(Convert.ToString(myBool));   // convert bool to string
+            // ... = Console.WriteLine(Convert.ToString(myInt));    // convert int to string
+            // ... = Console.WriteLine(Convert.ToDouble(myInt));    // convert int to double
+            // ... = Console.WriteLine(Convert.ToInt32(myDouble));  // convert double to int
+            // ... = Console.WriteLine(Convert.ToString(myBool));   // convert bool to string
 
 
             // Explicit Type Casting another way
             //-------------------------------------
             // double largeDouble = 12345.67;
-            // float smallFloat = (float)largeDouble; // double to float
-            // long smallLong = (long)smallFloat;     // float to long
-            // int smallInt = (int)smallLong;         // long to int
+            // ... = (float)largeDouble; // double to float
+            // ... = (long)smallFloat;     // float to long
+            // ... = (int)smallLong;         // long to int
 
 
             // Interpolating strings in C#
@@ -119,15 +119,23 @@ namespace CSharp_Reference
             ConsoleKeyInfo key = Console.ReadKey();
             Console.WriteLine($"\n{key.KeyChar}");
 
+            // Read line input
+            string guess = Console.ReadLine();
+            //int res = int.Parse(guess);
+            int num;
+            bool success = int.TryParse(guess, out num);
+
 
             // Sleep
             System.Threading.Thread.Sleep(500);
 
 
-            // Debugging and logging
+            // Trace, Debug and logging
             Trace.WriteLine("debugging");
             Debug.WriteLine("debugging");
             // see configurint trace listeners to write to a text file
+
+            // TODO logging
 
         }
     }
