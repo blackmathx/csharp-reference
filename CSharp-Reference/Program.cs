@@ -7,7 +7,7 @@ namespace CSharp_Reference
 {
     internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
 
             //_A_Intro.runner();
@@ -22,10 +22,8 @@ namespace CSharp_Reference
 
 
 
-            //_GamesRunner.runner();
-
-            //Console.WriteLine(StringUtils.UpperCase("pAytOn"));
-            //Console.WriteLine(StringUtils.LowerCase("PAyToN"));
+            _GamesRunner.runner();
+            //_UtilsDemo.runner();
 
 
 

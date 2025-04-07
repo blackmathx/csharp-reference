@@ -24,5 +24,10 @@ namespace CSharp_Reference.Utilities
             return input;
         }
 
+        public static String ReverseCase(string input)
+        {
+            // TODO implement
+            return "";
+        }
     }
 }

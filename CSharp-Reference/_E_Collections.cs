@@ -1,9 +1,15 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Collections.Immutable;
+using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CSharp_Reference
 {
@@ -11,6 +17,50 @@ namespace CSharp_Reference
     {
         public static void runner()
         {
+
+            /*
+            
+
+            Examples here include:
+               List
+               ArrayList
+               Dictionary
+               Queue
+               HashSet
+               Hashtable
+             
+              
+            There are several other collections in C#. Here are some more:
+          
+                Generic Collections(System.Collections.Generic)
+                    Stack < T > – LIFO(Last - In - First - Out) collection.
+                    SortedList < TKey, TValue > – Sorted key-value pairs.
+                    SortedDictionary < TKey, TValue > – Like Dictionary, but keeps keys sorted.
+                    LinkedList < T > – Doubly linked list.
+
+                Non - Generic Collections(System.Collections)
+                    Stack – Non - generic version of Stack<T>.
+                    SortedList – Non - generic key - value pair collection.
+
+                Concurrent Collections(System.Collections.Concurrent)
+                    ConcurrentBag < T > – Thread - safe unordered collection.
+                    ConcurrentQueue < T > – Thread - safe FIFO queue.
+                    ConcurrentStack < T > – Thread - safe LIFO stack.
+                    ConcurrentDictionary < TKey, TValue > – Thread - safe key - value pair collection.
+
+                Immutable Collections(System.Collections.Immutable)
+                    ImmutableList < T > – Read - only, thread - safe list.
+                    ImmutableDictionary < TKey, TValue > – Read - only, thread - safe dictionary.
+                    ImmutableHashSet < T > – Read - only, thread - safe hash set.
+                    ImmutableArray < T > – Read - only, fixed-size array.
+                    ImmutableQueue < T > – Read - only, thread - safe queue.
+                    ImmutableStack < T > – Read - only, thread - safe stack.
+
+            */
+
+
+
+
 
             // List<T>
             //-----------------------------------------------------------------------
@@ -77,7 +127,7 @@ namespace CSharp_Reference
             var queue = new Queue<string>();
             queue.Enqueue("John");
             queue.Enqueue("Alice");
-            string output = queue.Dequeue();    // remove from start
+            string output = queue.Dequeue();
             int count = queue.Count;
 
 
@@ -98,11 +148,39 @@ namespace CSharp_Reference
             Hashtable ht = new Hashtable();
             ht.Add("001", "Mark Ali");
             ht.Add("003", "Joe Honer");
+            ht.Add("004", "Joel Herms");
+            ht.Remove("004");
             bool tf = ht.Contains("003");
             ht.Clear();
 
 
 
+            // SortedList<TKey, TValue>
+            //-----------------------------------------------------------------------
+            var sortedList = new SortedList<int, string>();
+            sortedList.Add(2, "Second");
+            sortedList.Add(1, "First");
+            sortedList.Add(3, "Third");
+
+
+            var sortedList2 = new SortedList<int, string>
+            {
+                { 2, "Second" }, { 1, "First" }, { 3, "Third" }
+            };
+
+            sortedList2[1] = "Updated";   
+            sortedList2.Remove(2);             
+            bool hasKey = sortedList2.ContainsKey(1);
+            bool hasValue = sortedList2.ContainsValue("Third");
+            int keyIndex = sortedList2.IndexOfKey(3);
+            int valueIndex = sortedList2.IndexOfValue("Updated");
+
+
+            foreach (var item in sortedList2)
+                Console.WriteLine($"{item.Key}: {item.Value}");
+
+
+            sortedList2.Clear();
 
 
 

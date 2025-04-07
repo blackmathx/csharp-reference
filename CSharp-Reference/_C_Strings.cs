@@ -15,10 +15,12 @@ namespace CSharp_Reference
 
             string greeting = "Hello, World!";
 
+#pragma warning disable CS0219 // Variable is assigned but its value is never used
             string multiLine = """
                 "testing"
                   software
                 """;
+#pragma warning restore CS0219 // Variable is assigned but its value is never used
 
             string name = "Alice";
             string combined1 = greeting + " My name is " + name + ".";
@@ -100,6 +102,11 @@ namespace CSharp_Reference
             string wasChar = charX.ToString();              // convert a char to string. and 'new string ('a')' does not work for individual chars.
             Console.WriteLine($"result: {charX} and {wasChar}");
 
+            // StringBuilder
+            StringBuilder sb = new StringBuilder("start");
+            sb.Append("e");
+            sb.Append("nd");
+            string resultString = sb.ToString();
 
 
             Console.WriteLine("----------------------------------------------------------------------------------------------------");

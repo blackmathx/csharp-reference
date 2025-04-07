@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -38,13 +39,25 @@ namespace CSharp_Reference.ConsoleGames
             if(num == actual)
             {
                 Console.WriteLine($"Right, {actual}. {++tries} guesses.");
-                return;
+                playAgain();
             } else
             {
                 tries++;
                 Console.WriteLine((num < actual ? "Higher" : "Lower"));
                 goto GameLoop;
             }
+
+        }
+
+        private static void playAgain()
+        {
+            Console.WriteLine("Do you want to paly again? (y/n): ");
+            ConsoleKeyInfo key = Console.ReadKey();
+            if (key.KeyChar == 'y' || key.KeyChar == 'Y')
+            {
+                runner();
+            }
+            
 
         }
     }

@@ -12,9 +12,10 @@ namespace CSharp_Reference
     {
         public static void runner()
         {
-            Console.WriteLine("\n____Intro____\n");
+            const string INTRO = "\n____Intro____\n";
 
-            const string test = "this is a constant value";
+            Console.WriteLine(INTRO);
+
 
 
             // int        4 bytes  - Stores whole numbers from -2,147,483,648 to 2,147,483,647 (32-bit signed integer)
@@ -120,7 +121,7 @@ namespace CSharp_Reference
             Console.WriteLine($"\n{key.KeyChar}");
 
             // Read line input
-            string guess = Console.ReadLine();
+            string guess = Console.ReadLine() ?? "";
             //int res = int.Parse(guess);
             int num;
             bool success = int.TryParse(guess, out num);
