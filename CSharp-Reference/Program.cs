@@ -18,11 +18,11 @@ namespace CSharp_Reference
             //_F_ConditionalAndLoops.runner();
             //_G_Structs.runner();
             //_H_Classes.runner();
+            _I_LINQ.runner();
 
 
 
-
-            _GamesRunner.runner();
+            //_GamesRunner.runner();
             //_UtilsDemo.runner();
 
 

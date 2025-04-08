@@ -12,30 +12,19 @@ namespace CSharp_Reference
         {
             Console.WriteLine("\n____Strings____\n");
 
-
             string greeting = "Hello, World!";
 
-#pragma warning disable CS0219 // Variable is assigned but its value is never used
-            string multiLine = """
-                "testing"
-                  software
-                """;
-#pragma warning restore CS0219 // Variable is assigned but its value is never used
-
+            // String interpolation
             string name = "Alice";
             string combined1 = greeting + " My name is " + name + ".";
             string combined2 = $"{greeting} My name is {name}.";
             string combined3 = String.Format("Output: {0}, {1}.", greeting, "alice");
             string combined4 = $"{nameof(greeting)} has value {greeting}.";
-            //Console.WriteLine(combined4);
+            Console.WriteLine(combined4);
 
             int strLength = name.Length; 
 
-
-            // String manipulation
-            string upper = greeting.ToUpper();
-            string lower = greeting.ToLower();
-
+            // Substrings
             string substring = greeting.Substring(7, 5); // "World",, from index 7 and get 5 characters 
             string sub1 = greeting.Substring(7);         // "World!" (from index 7 to end)
             string sub2 = greeting.Substring(0, 5);      // "Hello" (first 5 characters)
@@ -51,6 +40,15 @@ namespace CSharp_Reference
             bool eqTest = greeting.Equals("HelloWorld");
 
 
+            string multiLine = """
+                "testing"
+                  software
+                """;
+
+
+            // String manipulation
+            string upper = greeting.ToUpper();
+            string lower = greeting.ToLower();
 
             // Static string methods in C#
             /*
@@ -114,9 +112,7 @@ namespace CSharp_Reference
 
             string something = new('c', count: 24); // expand multiples of a char into a string variable
 
-            #pragma warning disable CS0219 // Variable is assigned but its value is never used
             string somePath = @"C:\test\software\app"; // prepend a @ to specify a literal, otherwise \t is a tab.
-            #pragma warning restore CS0219 // Variable is assigned but its value is never used
 
 
         }
