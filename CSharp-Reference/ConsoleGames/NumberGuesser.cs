@@ -19,7 +19,7 @@ namespace CSharp_Reference.ConsoleGames
             Console.WriteLine("Guess a number between 1 and 100 in the least possible guesses");
 
         GameLoop:
-            String guess = Console.ReadLine();
+            String? guess = Console.ReadLine();
             //int res = int.Parse(guess);
             int num;
             bool success = int.TryParse(guess, out num);
