@@ -6,6 +6,7 @@
     <RootNamespace>CSharp_Reference</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	<NoWarn>CS8602, CS8600, CS0219</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
