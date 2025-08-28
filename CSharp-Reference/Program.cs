@@ -19,6 +19,7 @@ internal class Program
         //_G_Structs.runner();
         //_H_Classes.runner();
         //_I_LINQ.runner();
+        _Z_LeetCodeStarter.runner();
 
 
 
