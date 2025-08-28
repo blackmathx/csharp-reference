@@ -3,33 +3,33 @@ using CSharp_Reference.ConsoleGames;
 using CSharp_Reference.Utilities;
 
 
-namespace CSharp_Reference
+namespace CSharp_Reference;
+
+internal class Program
 {
-    internal class Program
+    private static void Main(string[] args)
     {
-        private static void Main(string[] args)
-        {
 
-            //_A_Intro.runner();
-            _B_Numbers.runner();
-            //_C_Strings.runner();
-            //_D_Arrays.runner();
-            //_E_Collections.runner();
-            //_F_ConditionalAndLoops.runner();
-            //_G_Structs.runner();
-            //_H_Classes.runner();
-            //_I_LINQ.runner();
+        //_A_Intro.runner();
+        //_B_Numbers.runner();
+        //_C_Strings.runner();
+        //_D_Arrays.runner();
+        //_E_Collections.runner();
+        //_F_ConditionalAndLoops.runner();
+        //_G_Structs.runner();
+        //_H_Classes.runner();
+        //_I_LINQ.runner();
 
 
 
-            //_GamesRunner.runner();
-            //_UtilsDemo.runner();
+        //_GamesRunner.runner();
+        //_UtilsDemo.runner();
 
 
 
-            Console.WriteLine("\nExiting CSharp-Reference\n\n");
-           
-            Environment.Exit(0);
-        }
+        Console.WriteLine("\nPress Enter to exit CSharp-Reference\n");
+        Console.ReadLine();
+        Environment.Exit(0);
     }
 }
+
