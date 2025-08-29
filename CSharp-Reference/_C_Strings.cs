@@ -9,7 +9,7 @@ internal class _C_Strings
 {
     public static void runner()
     {
-        Console.WriteLine("\n____Strings____\n");
+        Console.WriteLine("\n==== Strings ================================================================================================\n");
 
         string greeting = "Hello, World!";
 
@@ -57,6 +57,7 @@ internal class _C_Strings
         greeting.TrimStart()                                            // string, removes leading whitespace
         greeting.TrimEnd()                                              // string, removes trailing whitespace
         greeting.Replace("World", "C#")                                 // string, replaces a substring with another
+        greeting.Substring(5)                                           // string, gets substring from index to end
         greeting.Substring(0, 5)                                        // string, gets a substring starting from index 0 with length 5
         greeting.Split(',')                                             // string[], splits string by delimiter and returns an array
         greeting.Contains("Hello")                                      // bool, checks if substring exists in the string
@@ -80,6 +81,7 @@ internal class _C_Strings
         int number = 123;
         double pi = 3.14159;
         string numStr = number.ToString();
+        string numStr2 = Convert.ToString(number);
         string piStr = pi.ToString("F2");           // Formats to 2 decimal places
         Console.WriteLine($"Number as String: {numStr}, Pi as String: {piStr}");
 
@@ -101,16 +103,16 @@ internal class _C_Strings
 
         // StringBuilder
         StringBuilder sb = new StringBuilder("start");
-        sb.Append("e");
+        sb.Append('e');
         sb.Append("nd");
         string resultString = sb.ToString();
 
 
-        Console.WriteLine("----------------------------------------------------------------------------------------------------");
-        // Advanced strings
 
+
+        Console.WriteLine("\n==== Advanced_Strings =======================================================================================\n");
+    
         string something = new('c', count: 24); // expand multiples of a char into a string variable
-
         string somePath = @"C:\test\software\app"; // prepend a @ to specify a literal, otherwise \t is a tab.
 
 
